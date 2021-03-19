@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="board">
+            <a id="option1" onclick="playerTurn(1)"><div id="box1" class="table-cell box1"></div></a>
+            <a id="option2" onclick="playerTurn(2)"><div id="box2" class="table-cell box2"></div></a>
+            <a id="option3" onclick="playerTurn(3)"><div id="box3" class="table-cell box3"></div></a>
+            <a id="option4" onclick="playerTurn(4)"><div id="box4" class="table-cell box4"></div></a>
+            <a id="option5" onclick="playerTurn(5)"><div id="box5" class="table-cell box5"></div></a>
+            <a id="option6" onclick="playerTurn(6)"><div id="box6" class="table-cell box6"></div></a>
+            <a id="option7" onclick="playerTurn(7)"><div id="box7" class="table-cell box7"></div></a>
+            <a id="option8" onclick="playerTurn(8)"><div id="box8" class="table-cell box8"></div></a>
+            <a id="option9" onclick="playerTurn(9)"><div id="box9" class="table-cell box9"></div></a>
+        </div>
+    </div>
+    <div id="alert">
+        <div id="alert-message"></div>
+        <button onclick="resetBoard()" class="reset">Play Again</button>
+    </div>
+    <div id="game-settings">
+        <div class="name">Name: <input type="text" id="name"/></div>
+        <div class="marker">
+            X or O :
+            <input type="radio" name="choice1" value="X"> X
+            <input type="radio" name="choice1" value="O"> O
+        </div>
+        <div class="playFirst">
+            First move:
+            <input id="choose1" type="radio" name="choice" value="player"> player
+            <input id="choose2" type="radio" name="choice" value="pc"> pc
+        </div>
+        <button onclick="gameSettings()" class="set-settings">Reset Game</button>
+    </div>
+    <div class="score-board">
+        <div class="player">
+            <div class="player-name" id="player-name">Player</div>
+            <div class="player-score score" id="player-score">0</div>
+        </div>
+        <div class="ties">
+            <div class="ties-header">TIES</div>
+            <div class="ties-count score" id="ties">0</div>
+        </div>
+        <div class="pc">
+            <div class="pc-name">PC</div>
+            <div class="pc-score score" id="pc-score">0</div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
