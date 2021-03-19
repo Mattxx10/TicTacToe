@@ -43,9 +43,6 @@ function gameSettings(){
         playerMove = false;
         computerTurn();
     }
-    console.log(playerMove);
-    console.log(yes);
-    console.log(no);
     document.getElementById("game-settings").style.display = "none";
     playerName = document.getElementById("name").value;
     document.getElementById("player-name").innerText = playerName;
@@ -69,6 +66,7 @@ function resetBoard(){
             board[i][j] = 0;
         }
     }
+	moves = 1;
     if(yes === true){
         playerMove = true;
     }
@@ -76,8 +74,6 @@ function resetBoard(){
         playerMove = false;
         computerTurn();
     }
-    console.log(yes);
-    moves = 1;
     printBoard();
     set_combos();
     alertBox.style.display = "none";
@@ -109,7 +105,7 @@ function checkWinner(){
 			return true;
 		}
 	}
-	if (moves == 10) {
+	if (moves === 10) {
         alertBox.style.display = "block";
 		for (var i = 0; i < 8; i++) {
 			if (combos[i] == 3) {
@@ -119,11 +115,10 @@ function checkWinner(){
 			}
 			else if (combos[i] == -3) {
 				alertMessage.innerText = "You Lose!";
-                pcScore;
+                pcScore++;
 				return true;
 			}
 			else {
-				printBoard();
 				alertMessage.innerText = "It's a Tie!";
                 ties++;
 				return true;
@@ -189,13 +184,14 @@ function playerTurn(x){
         checkWinner();
         printBoard();
         playerMove = false;
-        computerTurn();
+		if(moves < 10){
+        	computerTurn();
+		}
     }
 }
 
 function computerTurn(){
     if(playerMove === false){
-        console.log('here');
         if (moves === 1) {
             board[1][1] = -1;
             moves++;
@@ -533,7 +529,7 @@ function bestMove(){
                 playerMove = true;
                 printBoard();
                 checkWinner();
-				}
+			}
 		}
 	}
 	else if (combos[6] === 2) {
