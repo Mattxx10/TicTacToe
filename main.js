@@ -347,7 +347,7 @@ function bestMove(){
 		return;
     }
     if((moves === 4) && (board[2][0] === -1) && (board[1][1] === 1) && (board[0][2] === 1)){
-        board[2][0] = -1;
+        board[2][2] = -1;
         moves++;
 		set_combos();
         playerMove = true;
