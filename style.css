@@ -21,6 +21,19 @@
     animation-duration: 2s;
 }
 
+.header{
+    width: 320px;
+    position: absolute;
+    top: 80px;
+    left:50%;
+    margin-left: -160px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+
 body{
     background-image: linear-gradient(to bottom right, rgb(165, 0, 0), rgb(202, 81, 0));
     background-size: cover;
@@ -44,7 +57,7 @@ body{
     top:50%;
     left:50%;
     margin-top: -200px;
-    margin-left: -150px;
+    margin-left: -160px;
 }
 #option1{
     position:absolute;
@@ -168,7 +181,7 @@ input[type=text] {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     padding: 0;
     color: white;
   }
@@ -178,17 +191,18 @@ input[type=text] {
     font-family: 'Josefin Sans', sans-serif;
     width: 320px;
     height: 180px;
-    border: 10px solid rgb(255, 115, 0);
+    border: 10px solid rgb(255, 255, 255);
     border-radius: 12px;
     position: fixed;
     top:50%;
     left:50%;
     margin-top: -75px;
-    margin-left: -160px;
+    margin-left: -170px;
     background-color: rgb(206, 0, 0);
     display:block;
     font-size: 18px;
     box-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 5px black;
 }
 
 .name{
@@ -226,7 +240,8 @@ input[type=text] {
     margin-left: -160px;
     font-family: 'Josefin Sans', sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
 }
 .player{
     display: inline-block;
