@@ -23,8 +23,8 @@
 
 .header{
     width: 320px;
-    position: absolute;
-    top: 80px;
+    position: fixed;
+    top: 70px;
     left:50%;
     margin-left: -160px;
     font-family: 'Josefin Sans', sans-serif;
