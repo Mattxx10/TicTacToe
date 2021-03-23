@@ -152,38 +152,79 @@ function printBoard(){
 
 function playerTurn(x){
     if(playerMove === true){
-        moves++;
-        if(x === 1){
+        
+        if(x === 1 && board[0][0] === 0){
             board[0][0] = 1;
-        }
-        else if(x === 2){
-            board[0][1] = 1;
-        }
-        else if(x === 3){
-            board[0][2] = 1;
-        }
-        else if(x === 4){
-            board[1][0] = 1;
-        }
-        else if(x === 5){
-            board[1][1] = 1;
-        }
-        else if(x === 6){
-            board[1][2] = 1;
-        }
-        else if(x === 7){
-            board[2][0] = 1;
-        }
-        else if(x === 8){
-            board[2][1] = 1;
-        }
-        else if(x === 9){
-            board[2][2] = 1;
-        }
-        set_combos();
+			moves++;
+			set_combos();
         checkWinner();
         printBoard();
         playerMove = false;
+        }
+        else if(x === 2 && board[0][1] === 0){
+            board[0][1] = 1;
+			moves++;
+			set_combos();
+        checkWinner();
+        printBoard();
+        playerMove = false;
+        }
+        else if(x === 3 && board[0][2] === 0){
+            board[0][2] = 1;
+			moves++;
+			set_combos();
+        checkWinner();
+        printBoard();
+        playerMove = false;
+        }
+        else if(x === 4 && board[1][0] === 0){
+            board[1][0] = 1;
+			moves++;
+			set_combos();
+        checkWinner();
+        printBoard();
+        playerMove = false;
+        }
+        else if(x === 5 && board[1][1] === 0){
+            board[1][1] = 1;
+			moves++;
+			set_combos();
+        checkWinner();
+        printBoard();
+        playerMove = false;
+        }
+        else if(x === 6 && board[1][2] === 0){
+            board[1][2] = 1;
+			moves++;
+			set_combos();
+        checkWinner();
+        printBoard();
+        playerMove = false;
+        }
+        else if(x === 7 && board [2][0] === 0){
+            board[2][0] = 1;
+			moves++;
+			set_combos();
+        checkWinner();
+        printBoard();
+        playerMove = false;
+        }
+        else if(x === 8 && board [2][1] === 0){
+            board[2][1] = 1;
+			moves++;
+			set_combos();
+        checkWinner();
+        printBoard();
+        playerMove = false;
+        }
+        else if(x === 9 && board [2][2] === 0){
+            board[2][2] = 1;
+			moves++;
+			set_combos();
+        checkWinner();
+        printBoard();
+        playerMove = false;
+        }
 		if(moves < 10){
         	computerTurn();
 		}
