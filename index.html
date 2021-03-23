@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
@@ -29,12 +33,12 @@
         <div class="name">Name: <input type="text" id="name"/></div>
         <div class="marker">
             X or O :
-            <input type="radio" name="choice1" value="X"> X
+            <input type="radio" name="choice1" value="X" checked="checked"> X
             <input type="radio" name="choice1" value="O"> O
         </div>
         <div class="playFirst">
             First move:
-            <input id="choose1" type="radio" name="choice" value="player"> player
+            <input id="choose1" type="radio" name="choice" value="player" checked="checked"> player
             <input id="choose2" type="radio" name="choice" value="pc"> pc
         </div>
         <button onclick="gameSettings()" class="set-settings">Reset Game</button>

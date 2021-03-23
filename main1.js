@@ -6,8 +6,8 @@ var board = [
 var moves = 1;
 var combos = new Array(8);
 var playerMove;
-var playerIcon = 'X';
-var pcIcon = 'O';
+var playerIcon = "X";
+var pcIcon = "O";
 var alertMessage = document.getElementById("alert-message");
 var alertBox = document.getElementById("alert");
 var playerScore = 0;
@@ -27,12 +27,12 @@ function gameSettings(){
                 }
             }
     if(selectedValue === 'X'){
-        playerIcon = 'X';
-        pcIcon = 'O';
+        playerIcon = '<i class="fas fa-times animate__bounceIn" style = "font-size: 100px"></i>';
+        pcIcon = '<i class="fas fa-circle-notch animate__bounceIn animate__delay-2s"></i>';
     }
     else if(selectedValue === 'O'){
-        playerIcon = 'O';
-        pcIcon = 'X';
+        playerIcon = '<i class="fas fa-circle-notch"></i>';
+        pcIcon = '<i class="fas fa-times"></i>';
     }
     yes = document.getElementById("choose1").checked;
     no = document.getElementById("choose2").checked;
@@ -134,10 +134,10 @@ function printBoard(){
     for(var i = 0; i < 3; i++){
         for(var j = 0; j < 3; j++){
             if( board[i][j] === 1 ){
-                document.getElementsByClassName("table-cell")[m].innerText = playerIcon;
+                document.getElementsByClassName("table-cell")[m].innerHTML = playerIcon;
             }
             else if( board[i][j] === -1 ){
-                document.getElementsByClassName("table-cell")[m].innerText = pcIcon;
+                document.getElementsByClassName("table-cell")[m].innerHTML = pcIcon;
             }
             else{
                 document.getElementsByClassName("table-cell")[m].innerText = "";

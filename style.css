@@ -16,6 +16,16 @@
         height:100%;
     }
 }
+.icon{
+    animation: animate__bounceIn;
+    animation-duration: 2s;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgb(165, 0, 0), rgb(202, 81, 0));
+    background-size: cover;
+    height: 100vh;
+}
 
 .table-cell{
     width: 100px;
@@ -24,6 +34,8 @@
     text-align: center;
     font-family:'arial';
     font-size: 80px;
+    color: white;
+    text-shadow: 2px 2px #000000;
 }
 .board{
     position: fixed;
@@ -44,7 +56,7 @@
 }
 #option3{
     position:absolute;
-    left:200px;
+    left:207px;
 }
 #option4{
     position:absolute;
@@ -59,64 +71,64 @@
 #option6{
     position:absolute;
     top:100px;
-    left:200px;
+    left:207px;
 }
 #option7{
     position:absolute;
-    top:200px;
+    top:207px;
     left:1px;
 }
 #option8{
     position:absolute;
-    top:200px;
+    top:207px;
     left:100px;
 }
 #option9{
     position:absolute;
-    top:200px;
-    left:200px;
+    top:207px;
+    left:207px;
 }
 .box1{
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-right: 7px solid white;
+    border-bottom: 7px solid white;
 }
 .box2{
-    border-left:  1px solid black;
-    border-right:  1px solid black;
-    border-bottom:  1px solid black;
+    border-left:  7px solid white;
+    border-right:  7px solid white;
+    border-bottom:  7px solid white;
 }
 .box3{
-    border-left:  1px solid black;
-    border-bottom:  1px solid black;
+    border-left:  7px solid white;
+    border-bottom:  7px solid white;
 }
 .box4{
-    border-top: 1px solid black;
-    border-right:  1px solid black;
-    border-bottom:  1px solid black;
+    border-top: 7px solid white;
+    border-right:  7px solid white;
+    border-bottom:  7px solid white;
 }
 .box5{
-    border-top: 1px solid black;
-    border-right:  1px solid black;
-    border-bottom:  1px solid black;
-    border-left:  1px solid black;
+    border-top: 7px solid white;
+    border-right:  7px solid white;
+    border-bottom:  7px solid white;
+    border-left:  7px solid white;
 }
 .box6{
-    border-top: 1px solid black;
-    border-bottom:  1px solid black;
-    border-left:  1px solid black;
+    border-top: 7px solid white;
+    border-bottom:  7px solid white;
+    border-left:  7px solid white;
 }
 .box7{
-    border-top: 1px solid black;
-    border-right:  1px solid black;
+    border-top: 7px solid white;
+    border-right:  7px solid white;
 }
 .box8{
-    border-top: 1px solid black;
-    border-right:  1px solid black;
-    border-left:  1px solid black;
+    border-top: 7px solid white;
+    border-right:  7px solid white;
+    border-left:  7px solid white;
 }
 .box9{
-    border-top: 1px solid black;
-    border-left:  1px solid black;
+    border-top: 7px solid white;
+    border-left:  7px solid white;
 }
 #alert{
     position: fixed;
@@ -149,25 +161,39 @@
     top:50%;
     left: 50%;
 }
+input[type=text] {
+    background-color:  rgb(206, 0, 0);
+    font-family:'Josefin Sans', sans-serif;
+    font-size: 18px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid black;
+    padding: 0;
+    color: white;
+  }
 
 #game-settings{
-    width: 300px;
-    height: 150px;
-    border: 1px solid black;
-    border-radius: 15px;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 320px;
+    height: 180px;
+    border: 10px solid rgb(255, 115, 0);
+    border-radius: 12px;
     position: fixed;
     top:50%;
     left:50%;
     margin-top: -75px;
-    margin-left: -150px;
-    background-color: white;
+    margin-left: -160px;
+    background-color: rgb(206, 0, 0);
     display:block;
-    font-size: 16px;
+    font-size: 18px;
+    box-shadow: 1px 1px 5px black;
 }
 
 .name{
     margin-left: 35px;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 .marker{
     margin-left: 35px;
@@ -178,21 +204,29 @@
     margin-top: 15px;
 }
 .set-settings{
-    width: 95px;
-    margin-left: -43px;
-    margin-top: 40px;
+    padding: 4px;
+    font-size: 16px;
+    width: 110px;
+    margin-left: -48px;
+    margin-top: 50px;
     position: absolute;
     top:50%;
+    color:white;
     left: 50%;
+    background-color: rgb(206, 0, 0);
+    font-family: 'Josefin Sans', sans-serif;
 }
 .score-board{
     width: 320px;
     height: 50px;
     position: fixed;
-    margin-top: 160px;
+    margin-top: 190px;
     top: 50%;
     left: 50%;
     margin-left: -160px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 16px;
 }
 .player{
     display: inline-block;
