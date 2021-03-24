@@ -31,8 +31,8 @@ function gameSettings(){
         pcIcon = '<i class="fas fa-circle-notch animate__bounceIn animate__delay-2s"></i>';
     }
     else if(selectedValue === 'O'){
-        playerIcon = '<i class="fas fa-circle-notch"></i>';
-        pcIcon = '<i class="fas fa-times"></i>';
+        playerIcon = '<i class="fas fa-circle-notch animate__bounceIn animate__delay-2s"></i>';
+        pcIcon = '<i class="fas fa-times animate__bounceIn" style = "font-size: 100px"></i>';
     }
     yes = document.getElementById("choose1").checked;
     no = document.getElementById("choose2").checked;
@@ -45,7 +45,20 @@ function gameSettings(){
     }
     document.getElementById("game-settings").style.display = "none";
     playerName = document.getElementById("name").value;
-    document.getElementById("player-name").innerText = playerName;
+	if(playerName === ""){
+		document.getElementById("player-name").innerText = "Player";
+	}
+	else{
+    	document.getElementById("player-name").innerText = playerName;
+	}
+}
+
+function close_settings(){
+	document.getElementById("game-settings").style.display = "none";
+}
+
+function open_settings(){
+	document.getElementById("game-settings").style.display = "block";
 }
 
 function set_combos(){

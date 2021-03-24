@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
+    <div class="open-setting" onclick="open_settings()"><i class="fas fa-cogs"></i></div>
     <div class="header animate__animated animate__rubberBand">
         <span class="tic">TIC</span>
         <span class="tac">TAC</span>
@@ -30,11 +31,12 @@
             <a id="option9" onclick="playerTurn(9)"><div id="box9" class="table-cell box9"></div></a>
         </div>
     </div>
-    <div id="alert">
+    <div id="alert" class="animate__animated animate__rubberBand">
         <div id="alert-message"></div>
         <button onclick="resetBoard()" class="reset">Play Again</button>
     </div>
-    <div id="game-settings">
+    <div id="game-settings" class="animate__animated animate__rubberBand">
+        <div class="close" onclick="close_settings()">+</div>
         <div class="menu-name">GAME SETTINGS</div>
         <div class="name">Name: <input type="text" id="name"/></div>
         <div class="marker">
