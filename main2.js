@@ -251,6 +251,16 @@ function playerTurn(x){
 
 function computerTurn(){
     if(playerMove === false){
+		if(moves === 4 && board[1][2] === 1 && board[2][1] === 1 && board[1][1] === -1){
+			board[2][2] = -1;
+			moves++;
+            set_combos();
+            printBoard();
+            checkWinner();
+            playerMove = true;
+            console.log(board[1][1]);
+            return;
+		}
         if (moves === 1) {
             board[1][1] = -1;
             moves++;
