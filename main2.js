@@ -51,6 +51,7 @@ function gameSettings(){
 	else{
     	document.getElementById("player-name").innerText = playerName;
 	}
+	resetBoard();
 }
 
 function close_settings(){
