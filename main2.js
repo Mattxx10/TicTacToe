@@ -76,6 +76,9 @@ function set_combos(){
 }
 
 function resetBoard(){
+	for(var i = 0; i < 8; i++){
+		document.getElementsByClassName("combos")[i].style.display = "none";
+	}
 	winner = false;
     for(var i = 0; i < 3; i++){
         for(var j = 0; j < 3; j++){
@@ -108,22 +111,33 @@ function checkWinner(){
 
 	}
 	for (var i = 0; i < 8; i++) {
-		if (combos[i] == 3) {
-            alertBox.style.display = "block";
-			alertMessage.innerText = "You Win!";
+		if (combos[i] === 3) {
+			document.getElementsByClassName("combos")[i].style.width = "300px";
+			setTimeout(function(){
+				
+				alertBox.style.display = "block", 5000;
+				alertMessage.innerText = "You Win!";
+			},1000);
 			winner = true;
             playerScore++;
 			return true;
 		}
-		else if (combos[i] == -3) {
-            alertBox.style.display = "block";
-			alertMessage.innerText = "You Lose!";
+		else if (combos[i] === -3) {
+			document.getElementsByClassName("combos")[i].style.display = "block";
+			setTimeout(function(){
+				
+				alertBox.style.display = "block";
+				alertMessage.innerText = "You Lose!";
+			}, 1000);
+			winner = true;
             pcScore++;
 			return true;
 		}
 	}
 	if (moves === 10) {
-        alertBox.style.display = "block";
+		setTimeout(function(){
+			alertBox.style.display = "block";
+		},1000);
 		for (var i = 0; i < 8; i++) {
 			if (combos[i] == 3) {
 				alertMessage.innerText = "You Win!";
@@ -133,11 +147,13 @@ function checkWinner(){
 			}
 			else if (combos[i] == -3) {
 				alertMessage.innerText = "You Lose!";
+				winner = true;
                 pcScore++;
 				return true;
 			}
 			else {
 				alertMessage.innerText = "It's a Tie!";
+				winner = true;
                 ties++;
 				return true;
 			}
@@ -169,7 +185,7 @@ function printBoard(){
 }
 
 function playerTurn(x){
-    if(playerMove === true){
+    if(playerMove === true && (winner === false)){
         
         if(x === 1 && board[0][0] === 0){
             board[0][0] = 1;

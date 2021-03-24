@@ -16,6 +16,10 @@
         height:100%;
     }
 }
+@keyframes appear{
+    from{ opacity: 0 }
+    to{ opacity: 1 }
+  }
 .icon{
     animation: animate__bounceIn;
     animation-duration: 2s;
@@ -143,6 +147,7 @@ body{
     border-left:  7px solid white;
 }
 #alert{
+    z-index: 2;
     font-family:'Josefin Sans', sans-serif;
     font-size: 18px;
     position: fixed;
@@ -159,7 +164,56 @@ body{
     display: none;
     box-shadow: 1px 1px 5px black;
 }
-
+.combos{
+    z-index: 1;
+    background-color: white;
+    width: 300px;
+    height: 10px;
+    position: fixed;
+    left: 50%;
+    margin-left: -150px;
+    top: 190px;
+    box-shadow: 1px 1px 5px black;
+    display: none;
+    animation: appear;
+    animation-duration: 0.5s;
+}
+.two{
+    top:300px;
+}
+.three{
+    top: 405px;
+}
+.four{
+    left: 50%;
+    margin-left: -260px;
+    top: 300px;
+    transform: rotate(90deg);
+}
+.five{
+    left: 50%;
+    margin-left: -153px;
+    top: 300px;
+    transform: rotate(90deg);
+}
+.six{
+    left: 50%;
+    margin-left: -60px;
+    top: 300px;
+    transform: rotate(90deg);
+}
+.seven{
+    left: 50%;
+    margin-left: -153px;
+    top: 300px;
+    transform: rotate(45deg);
+}
+.eight{
+    left: 50%;
+    margin-left: -153px;
+    top: 300px;
+    transform: rotate(-45deg);
+}
 #alert-message{
     margin-top: 15px;
     font-size: 25px;
@@ -199,6 +253,7 @@ input[type=text] {
   }
 
 #game-settings{
+    z-index: 2;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
     width: 320px;
