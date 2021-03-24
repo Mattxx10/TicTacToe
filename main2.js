@@ -16,6 +16,7 @@ var ties = 0;
 var playerName;
 var yes;
 var no;
+var winner = false;
 
 function gameSettings(){
     const rbs = document.querySelectorAll('input[name="choice1"]');
@@ -75,6 +76,7 @@ function set_combos(){
 }
 
 function resetBoard(){
+	winner = false;
     for(var i = 0; i < 3; i++){
         for(var j = 0; j < 3; j++){
             board[i][j] = 0;
@@ -109,6 +111,7 @@ function checkWinner(){
 		if (combos[i] == 3) {
             alertBox.style.display = "block";
 			alertMessage.innerText = "You Win!";
+			winner = true;
             playerScore++;
 			return true;
 		}
@@ -124,6 +127,7 @@ function checkWinner(){
 		for (var i = 0; i < 8; i++) {
 			if (combos[i] == 3) {
 				alertMessage.innerText = "You Win!";
+				winner = true;
                 playerScore++;
 				return true;
 			}
@@ -211,9 +215,9 @@ function playerTurn(x){
             board[1][2] = 1;
 			moves++;
 			set_combos();
-        checkWinner();
-        printBoard();
-        playerMove = false;
+        	checkWinner();
+        	printBoard();
+        	playerMove = false;
         }
         else if(x === 7 && board [2][0] === 0){
             board[2][0] = 1;
@@ -239,7 +243,7 @@ function playerTurn(x){
         printBoard();
         playerMove = false;
         }
-		if(moves < 10){
+		if(moves < 10 && winner === false){
         	computerTurn();
 		}
     }
