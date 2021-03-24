@@ -198,8 +198,9 @@ body{
 }
 .six{
     left: 50%;
-    margin-left: -60px;
+    margin-left: -45px;
     top: 300px;
+    display: block;
     transform: rotate(90deg);
 }
 .seven{
@@ -257,7 +258,7 @@ input[type=text] {
     color: white;
     font-family: 'Josefin Sans', sans-serif;
     width: 320px;
-    height: 180px;
+    height: 230px;
     border: 10px solid rgb(255, 255, 255);
     border-radius: 12px;
     position: fixed;
@@ -302,6 +303,10 @@ input[type=text] {
     margin-left: 35px;
     margin-top: 15px;
 }
+.difficulty{
+    margin-left: 25px;
+    margin-top: 15px;
+}
 .menu-name{
     position: absolute;
     font-size: 16px;
@@ -315,7 +320,7 @@ input[type=text] {
     font-size: 18px;
     width: 115px;
     margin-left: -48px;
-    margin-top: 50px;
+    margin-top: 75px;
     position: absolute;
     top:50%;
     color:white;

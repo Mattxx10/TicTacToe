@@ -17,6 +17,7 @@ var playerName;
 var yes;
 var no;
 var winner = false;
+var difficulty = 1;
 
 function gameSettings(){
     const rbs = document.querySelectorAll('input[name="choice1"]');
@@ -35,6 +36,18 @@ function gameSettings(){
         playerIcon = '<i class="fas fa-circle-notch animate__bounceIn animate__delay-2s"></i>';
         pcIcon = '<i class="fas fa-times animate__bounceIn" style = "font-size: 100px"></i>';
     }
+	var easy = document.getElementById("choose3").checked;
+	var normal = document.getElementById("choose4").checked;
+	var hard = document.getElementById("choose5").checked;
+	if(easy === true){
+        difficulty = 1;
+    }
+    if(normal === true){
+        difficulty = 2;
+    }
+	if(hard === true){
+		difficulty = 3;
+	}
     yes = document.getElementById("choose1").checked;
     no = document.getElementById("choose2").checked;
     if(yes === true){
@@ -112,7 +125,7 @@ function checkWinner(){
 	}
 	for (var i = 0; i < 8; i++) {
 		if (combos[i] === 3) {
-			document.getElementsByClassName("combos")[i].style.width = "300px";
+			document.getElementsByClassName("combos")[i].style.display = "block";
 			setTimeout(function(){
 				
 				alertBox.style.display = "block", 5000;
@@ -266,6 +279,40 @@ function playerTurn(x){
 }
 
 function computerTurn(){
+	if(playerMove === false && difficulty === 1){
+		while(playerMove  === false){
+			randomCol = Math.floor(Math.random() * Math.floor(3));
+			randomRow = Math.floor(Math.random() * Math.floor(3));
+			if(board[randomRow][randomCol] === 0){
+				board[randomRow][randomCol] = -1;
+				moves++;
+            	set_combos();
+            	printBoard();
+            	checkWinner();
+            	playerMove = true;
+            	console.log(board[1][1]);
+            	return;
+			}
+		}
+	}
+	if(playerMove === false && difficulty === 2){
+		if(moves === 1 || moves === 2){
+			while(playerMove  === false){
+				randomCol = Math.floor(Math.random() * Math.floor(3));
+				randomRow = Math.floor(Math.random() * Math.floor(3));
+				if(board[randomRow][randomCol] === 0){
+					board[randomRow][randomCol] = -1;
+					moves++;
+					set_combos();
+					printBoard();
+					checkWinner();
+					playerMove = true;
+					console.log(board[1][1]);
+					return;
+				}
+			}
+		}
+	}
     if(playerMove === false){
 		if(moves === 4 && board[1][2] === 1 && board[2][1] === 1 && board[1][1] === -1){
 			board[2][2] = -1;
