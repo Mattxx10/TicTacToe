@@ -200,7 +200,6 @@ body{
     left: 50%;
     margin-left: -45px;
     top: 300px;
-    display: block;
     transform: rotate(90deg);
 }
 .seven{
